@@ -3,6 +3,9 @@ site_url: https://usumarsroverteam.github.io
 
 theme:
   name: material
+  font:
+    text: Atkinson Hyperlegible
+    code: JetBrains Mono
   palette:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
@@ -19,21 +22,31 @@ theme:
         icon: material/weather-night
         name: Switch to dark mode
   features:
+    - navigation.instant
+    - navigation.tabs
     - navigation.sections
-    - navigation.expand
+    - navigation.collapse
+    - navigation.indexes
+    - navigation.top
 extra_css:
   - stylesheets/extra.css
 
 nav:
-  - Overview: index.md
-  - System Breakdown:
-      - Comms and Controls: sys-breakdown/comms-ctrls.md
-      - Drive System: sys-breakdown/drive.md
-      - Robotic Arm: sys-breakdown/arm.md
-      - Science Module: sys-breakdown/sci.md
-      - Autonomous Navigation: sys-breakdown/autonomous.md
+  - Home: index.md
+  - System Overview:
+      - sys-overview/index.md
+      - Comms and Controls: sys-overview/comms-ctrls.md
+      - Drive System: sys-overview/drive.md
+      - Robotic Arm: sys-overview/arm.md
+      - Science Module: sys-overview/sci.md
+      - Autonomous Navigation: sys-overview/autonomous.md
   - Appendix:
+      - appendix/index.md
       - Wiring Diagrams: appendix/wiring-diagrams.md
       - How-Tos: appendix/how-tos.md
   - Resources:
-      - Presidency: resources/presidency.md
+      - resources/index.md
+
+markdown_extensions:
+  - toc:
+      permalink: true

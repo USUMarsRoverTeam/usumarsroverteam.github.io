@@ -23,3 +23,12 @@
   background-color: rgba(245, 130, 32, 0.25);
   border-radius: 4px;
 }
+
+.md-content a:link,
+.md-content a:visited {
+  color: var(--md-accent-fg-color) !important;
+}
+
+.md-content a:hover {
+  color: var(--md-primary-fg-color--light) !important;
+}
