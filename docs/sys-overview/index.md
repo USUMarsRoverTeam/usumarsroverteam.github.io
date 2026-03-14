@@ -8,8 +8,6 @@ hide:
 # System Overview
 This is where all the overviews are held
 
-Also probably some flowcharts? 
-
 ## Subsystems
 
 - [Comms and Controls](comms-ctrls.md)
