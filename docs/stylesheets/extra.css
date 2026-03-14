@@ -17,3 +17,9 @@
   --md-default-bg-color: #0a1a2a; /* Dark navy background */
   --md-default-fg-color: #ffffff; /* White text */
 }
+
+[data-md-color-scheme="slate"] .md-nav__link--active {
+  color: #a2aaad !important;
+  background-color: rgba(162, 170, 173, 0.15);
+  border-radius: 4px;
+}

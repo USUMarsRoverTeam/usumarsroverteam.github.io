@@ -1,33 +1,37 @@
 site_name: USU Mars Rover Team Documentation
-site_url: usumarsroverteam.github.io
+site_url: https://usumarsroverteam.github.io
 
 theme:
   name: material
   palette:
-    - scheme: default
-      primary: custom
-      accent: custom
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
-    - scheme: slate
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       primary: custom
       accent: custom
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
   features:
     - navigation.sections
     - navigation.expand
+extra_css:
+  - stylesheets/extra.css
 
 nav:
   - Overview: index.md
-  - Sys Breakdown:
-      - Comms/Ctrls: sys-breakdown/comms-ctrls.md
-      - Drive: sys-breakdown/drive.md
-      - ARM: sys-breakdown/arm.md
-      - SCi: sys-breakdown/sci.md
-      - AUTONOMOUS: sys-breakdown/autonomous.md
+  - System Breakdown:
+      - Comms and Controls: sys-breakdown/comms-ctrls.md
+      - Drive System: sys-breakdown/drive.md
+      - Robotic Arm: sys-breakdown/arm.md
+      - Science Module: sys-breakdown/sci.md
+      - Autonomous Navigation: sys-breakdown/autonomous.md
   - Appendix:
       - Wiring Diagrams: appendix/wiring-diagrams.md
       - How-Tos: appendix/how-tos.md
