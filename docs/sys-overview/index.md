@@ -3,7 +3,6 @@ title: System Overview
 icon: material/robot
 hide:
     - navigation
-    - toc
 ---
 # System Overview
 This is where all the overviews are held
