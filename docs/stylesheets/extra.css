@@ -1,0 +1,19 @@
+/* Light mode */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #0f2439;
+  --md-primary-fg-color--light: #1a3a5c;
+  --md-primary-fg-color--dark: #091729;
+  --md-accent-fg-color: #a2aaad;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: #ffffff;
+}
+
+/* Dark mode */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #0f2439;
+  --md-primary-fg-color--light: #1a3a5c;
+  --md-primary-fg-color--dark: #091729;
+  --md-accent-fg-color: #a2aaad;
+  --md-default-bg-color: #0a1a2a; /* Dark navy background */
+  --md-default-fg-color: #ffffff; /* White text */
+}
