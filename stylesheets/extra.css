@@ -27,6 +27,7 @@
   --md-default-fg-color: #ffffff;
 }
 
+[data-md-color-scheme="slate"] .md-nav__title,
 [data-md-color-scheme="slate"] .md-typeset h1,
 [data-md-color-scheme="slate"] .md-typeset h2,
 [data-md-color-scheme="slate"] .md-typeset h3,
@@ -37,9 +38,7 @@
 }
 
 [data-md-color-scheme="slate"] .md-nav__link--active {
-  color: #a2aaad !important;
-  background-color: rgba(245, 130, 32, 0.25);
-  border-radius: 4px;
+  color: #01add8 !important;
 }
 
 .md-content a:link,
