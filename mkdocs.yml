@@ -3,6 +3,8 @@ site_url: https://usumarsroverteam.github.io
 
 theme:
   name: material
+  favicon: assets/marsroverwhiteicon.png
+  logo: assets/marsroverwhite.png
   font:
     text: Atkinson Hyperlegible
     code: JetBrains Mono
