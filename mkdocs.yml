@@ -48,6 +48,8 @@ nav:
       - How-Tos: appendix/how-tos.md
   - Resources:
       - resources/index.md
+  - Next Year Projects:
+      - Placeholder: next-year-projects/placeholder.md
 
 markdown_extensions:
   - toc:
