@@ -44,6 +44,7 @@ nav:
       - Autonomous Navigation: sys-overview/autonomous.md
   - Appendix:
       - appendix/index.md
+      - Datasheets: appendix/datasheets.md
       - Wiring Diagrams: appendix/wiring-diagrams.md
       - How-Tos: appendix/how-tos.md
   - Resources:
@@ -52,5 +53,9 @@ nav:
       - Placeholder: next-year-projects/placeholder.md
 
 markdown_extensions:
+  - attr_list
   - toc:
       permalink: true
+
+plugins:
+  - mkdocs-pdf
