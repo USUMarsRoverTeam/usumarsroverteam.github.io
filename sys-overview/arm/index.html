@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#arm-documentation" class="md-skip">
+        <a href="#description" class="md-skip">
           Skip to content
         </a>
       
@@ -367,6 +367,8 @@
       
         
       
+        
+      
     
     
     
@@ -443,6 +445,36 @@
     
   
     Comms and Controls
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chassis/" class="md-nav__link">
+        
+  
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.99.99 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88zM12 4.15 6.04 7.5 12 10.85l5.96-3.35zM5 15.91l6 3.38v-6.71L5 9.21zm14 0v-6.7l-6 3.37v6.71z"/></svg>
+  
+  <span class="md-ellipsis">
+    
+  
+    Chassis/Frame
   
 
     
@@ -553,10 +585,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#arm-documentation" class="md-nav__link">
+  <a href="#description" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Arm Documentation
+        Description
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issues
       
     </span>
   </a>
@@ -998,10 +1041,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#arm-documentation" class="md-nav__link">
+  <a href="#description" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Arm Documentation
+        Description
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Issues
       
     </span>
   </a>
@@ -1027,7 +1081,69 @@
 
   <h1>Robotic Arm</h1>
 
-<h2 id="arm-documentation">Arm Documentation<a class="headerlink" href="#arm-documentation" title="Permanent link">¶</a></h2>
+<div><h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">¶</a></h2>
+<ul>
+<li>Arm separate from rover body, base attaches to frame.</li>
+<li>Made up of 6 Degrees of Freedom</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Degree of Freedom</th>
+<th>Function/Name</th>
+<th>Motor Type</th>
+<th>Level of Functionality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DOF0</td>
+<td>Yaw</td>
+<td>DC Motor Attached to Gearbox</td>
+<td><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/26a0.svg" title=":warning:"> Semi-Functional</td>
+</tr>
+<tr>
+<td>DOF1</td>
+<td>"Shoulder"</td>
+<td>Linear Actuator</td>
+<td>Works</td>
+</tr>
+<tr>
+<td>DOF2</td>
+<td>"Elbow"</td>
+<td>Linear Actuator</td>
+<td>Works</td>
+</tr>
+<tr>
+<td>DOF3</td>
+<td>"Wrist Pitch"</td>
+<td>Linear Actuator</td>
+<td>Works</td>
+</tr>
+<tr>
+<td>DOF4</td>
+<td>"Claw Grab"</td>
+<td>Servo (With Custom Top Plate)</td>
+<td>Works</td>
+</tr>
+<tr>
+<td>DOF5</td>
+<td>"Wrist Spin"</td>
+<td>Servo</td>
+<td>Works (Velocity Controlled)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Claw attaches at DOF4</li>
+<li>Controlled by a Pololu 6-Channel Micro Maestro</li>
+</ul>
+<h2 id="issues">Issues<a class="headerlink" href="#issues" title="Permanent link">¶</a></h2>
+<ul>
+<li>Integration with arm is currently pain. (Really sorry David)</li>
+<li>Motor box has been replaced multiple times this year, needs analysis.</li>
+<li>Claw is currently plastic, low grip.</li>
+</ul></div>
 
 
 
