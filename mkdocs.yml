@@ -38,12 +38,14 @@ nav:
   - System Overview:
       - sys-overview/index.md
       - Comms and Controls: sys-overview/comms-ctrls.md
+      - Chassis/Frame: sys-overview/chassis.md
       - Drive System: sys-overview/drive.md
       - Robotic Arm: sys-overview/arm.md
       - Science Module: sys-overview/sci.md
       - Autonomous Navigation: sys-overview/autonomous.md
   - Appendix:
       - appendix/index.md
+      - Datasheets: appendix/datasheets.md
       - Wiring Diagrams: appendix/wiring-diagrams.md
       - How-Tos: appendix/how-tos.md
   - Resources:
@@ -52,5 +54,13 @@ nav:
       - Placeholder: next-year-projects/placeholder.md
 
 markdown_extensions:
+  - attr_list
+  - tables
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - toc:
       permalink: true
+
+plugins:
+  - mkdocs-pdf
