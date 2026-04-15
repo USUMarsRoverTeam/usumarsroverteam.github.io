@@ -52,4 +52,4 @@ file
                             deimos3.rviz 
 
 ```
-Now you should be looking at a top down view of the rover in gazebo with the correct obstacles loaded in. Have fun playing around!
+Now you should be looking at a top down view of the rover in gazebo with the correct obstacles loaded in. Have fun playing around!!
