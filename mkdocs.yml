@@ -35,6 +35,10 @@ extra_css:
 
 nav:
   - Home: index.md
+  - Suggested Capstone Information:
+      - capstone-resources/index.md
+      - Suggested Schedule: capstone-resources/suggested-schedule.md
+      - Future Work: capstone-resources/future-work.md
   - System Overview:
       - sys-overview/index.md
       - Comms and Controls: sys-overview/comms-ctrls.md
@@ -43,6 +47,7 @@ nav:
       - Robotic Arm: sys-overview/arm.md
       - Science Module: sys-overview/sci.md
       - Autonomous Navigation: sys-overview/autonomous.md
+      - Drone: sys-overview/drone.md
   - Appendix:
       - appendix/index.md
       - Datasheets: appendix/datasheets.md
@@ -50,8 +55,6 @@ nav:
       - How-Tos: appendix/how-tos.md
   - Resources:
       - resources/index.md
-  - Next Year Projects:
-      - Placeholder: next-year-projects/placeholder.md
 
 markdown_extensions:
   - attr_list
@@ -61,6 +64,8 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - toc:
       permalink: true
+      toc_depth: 3
+  - md_in_html
 
 plugins:
   - mkdocs-pdf
