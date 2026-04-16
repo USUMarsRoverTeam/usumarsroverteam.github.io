@@ -65,6 +65,8 @@ markdown_extensions:
   - toc:
       permalink: true
       toc_depth: 3
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - md_in_html
 
 plugins:

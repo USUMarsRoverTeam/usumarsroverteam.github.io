@@ -56,3 +56,23 @@ During testing, the science module's auger collected soil from a depth of greate
 </figure>
 
 Across multiple trials, the auger reached a depth ranging from 12 cm to 15 cm at the highest. The greatest sample mass collected was 10 g in early testing, and further testing reached a higher value of 15 g. Our testing confirmed the auger exceeds the URC's basic constraints for sample collection. We also tested the reaction of hydrogen peroxide with soil samples, and we observed bubbling as we predicted, indicating the presence of catalase.
+
+# Drawings:
+
+## Science Module Chassis
+![Science Module Chassis](../files/sci-mod/sciModChassis.pdf){ type=application/pdf style="min-height:75vh;width:100%" }
+
+## Coring Bit - Drive Motor Coupling
+![Coring Bit - Drive Motor Coupling](../files/sci-mod/coringBitDriveMotorCouplingAssembly.pdf){ type=application/pdf style="min-height:75vh;width:100%" }
+
+## Linear Actuator and Drive Motor
+![Linear Actuator and Drive Motor](../files/sci-mod/linActuatorAndDriveMotorAssembly.pdf){ type=application/pdf style="min-height:75vh;width:100%" }
+
+## Sample Bucket
+![Sample Bucket](../files/sci-mod/sampleBucket.pdf){ type=application/pdf style="min-height:75vh;width:100%" }
+
+## Sample Bucket Chain
+![Sample Bucket Chain](../files/sci-mod/sampleBucketChain.pdf){ type=application/pdf style="min-height:75vh;width:100%" }
+
+## Linear Mount
+![Linear Mount](../files/sci-mod/linearMount.pdf){ type=application/pdf style="min-height:75vh;width:100%" }
