@@ -671,6 +671,45 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#running-gazebo-and-rviz2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running Gazebo and Rviz2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running Gazebo and Rviz2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opening-gazebo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opening Gazebo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-rviz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuring rviz
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1075,6 +1114,45 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#running-gazebo-and-rviz2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running Gazebo and Rviz2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Running Gazebo and Rviz2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opening-gazebo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opening Gazebo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-rviz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuring rviz
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1112,7 +1190,41 @@
 <li>
 <p>The plugin <code>diff_drive</code> found in <code>gazebo_control.xacro</code> doesnt really work... I manually made it so the back 2 wheels do not have any friction, and are colored black. It is my understanding that there used to be a skid_steer plugin back when ROS1 whas being used, but it was removed when everything got upgraded to ROS2. Some work will need to be done to figure it out.</p>
 </li>
-</ul></div>
+</ul>
+<h3 id="running-gazebo-and-rviz2">Running Gazebo and Rviz2<a class="headerlink" href="#running-gazebo-and-rviz2" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>This assumes that you have already watched the first few videos on the playlist, and have Ubuntu, Gazebo, Rviz2, and all packages installed on your pc. </p>
+</blockquote>
+<h4 id="opening-gazebo">Opening Gazebo<a class="headerlink" href="#opening-gazebo" title="Permanent link">¶</a></h4>
+<pre><code class="language-bash"># 1. Build
+cd ~/dev_ws2
+colcon build --symlink-install
+source install/setup.bash
+
+# 2. Run (in separate terminals/tmux panes)
+ros2 launch deimos_simulation launch_sim.launch.py world:=./src/deimos_simulation/worlds/dumpster_world
+ros2 launch slam_toolbox online_async_launch.py params_file:=./src/deimos_simulation/config/mapper_params_online_async.yaml use_sim_time:=true
+rviz2
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+</code></pre>
+<blockquote>
+<p>Gazebo and rviz2 should no be opened, and you should be able to drive the rover around in gazebo using teleop_twist_keyboard.</p>
+</blockquote>
+<h4 id="configuring-rviz">Configuring rviz<a class="headerlink" href="#configuring-rviz" title="Permanent link">¶</a></h4>
+<blockquote>
+<p>Once rviz is open, follow these instructions.</p>
+</blockquote>
+<pre><code class="language-bash">file
+    open config
+        user
+            dev_ws2
+                src
+                    deimos_simulation
+                        config
+                            deimos3.rviz 
+
+</code></pre>
+<p>Now you should be looking at a top down view of the rover in gazebo with the correct obstacles loaded in. Have fun playing around!!</p></div>
 
 
 
