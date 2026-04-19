@@ -2,14 +2,15 @@
 title: Comms and Controls
 icon: material/antenna
 ---
-# Teensy + MicroRos
+This section contains a lot of information regarding how the rover is Controlled
+## Running the Rover (In General)
 
-## Running the MicroRos 
+### Running the MicroRos 
 **(Teensy uses MicroRos to communicate as its own ROS2 Node)**
 
 I basically followed this [video](https://www.youtube.com/watch?v=SV7DeB7kDZs) and it worked perfectly.
 
-### Basic checklist
+#### Basic checklist
 
 - Install Arduino on computer
 - Insert teensy link on the Arduino interface to load the boards: [LINK](https://www.pjrc.com/teensy/td_download.html)
@@ -33,7 +34,7 @@ I basically followed this [video](https://www.youtube.com/watch?v=SV7DeB7kDZs) a
 
 - Now the agent is running and is linked to the serial port with your teensy controller.
 
-### Running the Docker
+#### Running the Docker
 
 Each time after you edit the docker file/image you need to rebuild that image:
 
@@ -42,7 +43,7 @@ docker build -t ros2_jazzy_urc:latest .
 ./run_ros2_container.sh
 ```
 
-## TMUX Keybinds
+### TMUX Keybinds
 
 > Tmux sometimes changes up the need for a shift input. If it doesn't work, try adding shift before the special character, e.g. `Ctrl + b + Shift + %`
 
@@ -56,7 +57,7 @@ docker build -t ros2_jazzy_urc:latest .
 | `Ctrl+b z`                        | Zoom current pane                      |
 | `Ctrl+b !`                        | Break pane into new window |
 
-## Build and Run rover_teleop
+### Build and Run rover_teleop
 
 ```bash
 # 1. Build
@@ -71,7 +72,7 @@ ros2 topic echo /joy
 ros2 topic echo /cmd_vel
 ```
 
-## Clear Build Files and Rebuild
+### Clear Build Files and Rebuild
 
 Cleans entire workspace:
 
@@ -81,7 +82,7 @@ colcon build
 source install/setup.bash
 ```
 
-## Debugging and Testing
+### Debugging and Testing
 
 **Test the joystick is sending data:**
 
@@ -111,7 +112,7 @@ ros2 topic info /your_topic_name
 ros2 interface show <message_type>
 ```
 
-## Launch Files
+### Launch Files
 
 ```bash
 ros2 launch rover_bringup rover_launch.py
@@ -120,7 +121,7 @@ ros2 launch rover_bringup old_science_mod_launch.py
 
 > **Important:** If you are mapping two controllers and remapping different nodes, make sure the new topic remapping names match. `cmd_vel` is an example — it was remapped to `drive/cmd_vel` and wasn't working because nothing was publishing to `cmd_vel`.
 
-## Running More Publishers and Subscribers on Microros
+### Running More Publishers and Subscribers on Microros
 
 To locate the `colcon.meta` file, find your Arduino libraries folder:
 
@@ -138,13 +139,13 @@ micro_ros_arduino → extras → library_generation → colcon.meta
 
 > **Important:** Simply editing `colcon.meta` with Notepad or VS Code will not change anything. Because `micro_ros_arduino` is a precompiled library, the `.a` static library files are already baked with default limits (usually 5 publishers/subscribers each). You must rebuild the entire library using `library_generation.sh`.
 
-### Rebuild Process
+#### Rebuild Process
 
 1. Open `colcon.meta` and change `RMW_UXRCE_MAX_PUBLISHERS` and `RMW_UXRCE_MAX_SUBSCRIPTIONS` to your desired number (e.g. 15 or 20)
 2. Use the official micro-ROS Docker image (`microros/micro_ros_static_library_builder`) to run the build script
 3. After the script finishes, replace the compiled files in the `src` folder of the library
 
-## Connecting Sophia to Wifi Through SSH
+### Connecting Sophia to Wifi Through SSH (Should Be Obsolete with New Comptuer)
 
 On **Deimos (ground station)**, run these once:
 

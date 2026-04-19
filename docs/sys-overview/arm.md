@@ -19,6 +19,9 @@ title: Robotic Arm
 - Claw attaches at DOF4
 - Controlled by a Pololu 6-Channel Micro Maestro
 
+## Wiring Notes:
+Switched to a DB25 connector for easy connections, this connects to both the Maestro control board as well as a voltage stepdown. On the Maestro, to the DB25 yellow wires are signal and white are ground, and the voltage stepdown limits the wire to 12V to not burn out components on the arm. Currently, the Micro Maestro connects to the rover computer through a USB port, though integration with the Teensy is likely.
+
 ## Issues
 - Integration with arm is currently pain. (Really sorry David)
 - Motor box has been replaced multiple times this year, needs analysis.

@@ -2,8 +2,7 @@
 title: Science Module
 icon: material/flask
 ---
-# System Overview
-
+## System Overview
 The science module assembly is a completely secondary system, able to be attached and detached from the rover chassis. The science module collects soil samples from the ground and performs life-detecting experiments on board with these samples. The data is collected on the rover and the data is relayed back to the ground station. Figure 5 below shows the science module's complete assembly on the rover.
 
 <figure markdown="span">
@@ -22,17 +21,28 @@ The science module is made up of coring bit that collects the soil and a vial ca
 The vial test tube chain is mounted below the coring drill underneath the chassis platform. All wires to control the science module are run through the front of the electronics housing. An image of the science module assembly on the rover is shown in Figure 3. The linear actuator, coring motor, and carousel all use motors that rely on PWM signals to control them. The vial carousel and Science Module lowering mechanism use stepper motors that use digitally controlled stepper drivers as their control source.
 
 <figure markdown="span">
-    ![Assembled Rover with Mounted Science Module](../assets/brain.svg)
+    ![Assembled Rover with Mounted Science Module](../assets/invisibleRoverSciMod.png)
     <figcaption>Figure 3: Assembled Rover with Mounted Science Module</figcaption>
 </figure>
+
+## Notes on Motor Controllers:
+
+### DC Motor Controllers
+Didn’t run into much issue with these. We stitched them to 4mm bullet connectors for ease of switching between modules. When plugging in the system, if the system is not going the correct direction, switching the two bullets should change the polarity.
+
+### Stepper Motor Drivers
+When using stepper controllers, use caution to learn what the switches on the side do. At one point, we made a mistake and assumed that the switches were all accurate. But what must have happened was some time between the previous year and us getting it, someone must have been playing with the switches or they got bumped, because we almost burned out a motor by sending 3A continuously to it. We caught it in time, as the motor was getting extremely hot, but make sure you check the small white switches before operating.
+
+The sample chain was increased from a NEMA 17 motor to a larger one, to increase torque. There is also a need for implementation for the temperature, light, and humidity sensors. We ordered them, but never got to implementation. There is also a need to order and implement limit switches on the up and down extension of the overall sci-mod. It is running into an issue where it is hard to determine when to stop going up or down from the ground station.
+
 
 ## Subsystem Review
 
 The science module consists of four subsystems: **the coring motor, the sample bucket chain**, **the science module lowering platform**, and **the linear actuator**, tied together by a ROS-based control system. This is seen below in Figure 12.
 
 <figure markdown="span">
-    ![Science Module Assembly in CAD](../assets/brain.svg)
-    <figcaption>Figure 12: Science Module Assembly in CAD</figcaption>
+    ![Science Module Assembly in CAD](../assets/SciModExploded.png)
+    <figcaption>Figure 4: Science Module Assembly in CAD</figcaption>
 </figure>
 
 
@@ -56,23 +66,3 @@ During testing, the science module's auger collected soil from a depth of greate
 </figure>
 
 Across multiple trials, the auger reached a depth ranging from 12 cm to 15 cm at the highest. The greatest sample mass collected was 10 g in early testing, and further testing reached a higher value of 15 g. Our testing confirmed the auger exceeds the URC's basic constraints for sample collection. We also tested the reaction of hydrogen peroxide with soil samples, and we observed bubbling as we predicted, indicating the presence of catalase.
-
-# Drawings:
-
-## Science Module Chassis
-![Science Module Chassis](../files/sci-mod/sciModChassis.pdf){ type=application/pdf style="min-height:75vh;width:100%" }
-
-## Coring Bit - Drive Motor Coupling
-![Coring Bit - Drive Motor Coupling](../files/sci-mod/coringBitDriveMotorCouplingAssembly.pdf){ type=application/pdf style="min-height:75vh;width:100%" }
-
-## Linear Actuator and Drive Motor
-![Linear Actuator and Drive Motor](../files/sci-mod/linActuatorAndDriveMotorAssembly.pdf){ type=application/pdf style="min-height:75vh;width:100%" }
-
-## Sample Bucket
-![Sample Bucket](../files/sci-mod/sampleBucket.pdf){ type=application/pdf style="min-height:75vh;width:100%" }
-
-## Sample Bucket Chain
-![Sample Bucket Chain](../files/sci-mod/sampleBucketChain.pdf){ type=application/pdf style="min-height:75vh;width:100%" }
-
-## Linear Mount
-![Linear Mount](../files/sci-mod/linearMount.pdf){ type=application/pdf style="min-height:75vh;width:100%" }
