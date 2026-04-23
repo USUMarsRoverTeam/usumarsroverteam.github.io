@@ -1,5 +1,8 @@
 ---
 title: Home
 icon: material/home
+hide:
+    - navigation
+    - toc
 ---
-# Here's a Main Page
+# This is where all of the docs go

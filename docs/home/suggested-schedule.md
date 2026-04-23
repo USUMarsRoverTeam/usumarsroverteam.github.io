@@ -4,6 +4,7 @@ icon: material/calendar-arrow-right
 ---
 # Here's a Main Page
 
+<!-- TODO -->
 ## TODO:
 - [] basic competition deadlines
 - [] give an idea of when outreach events need to be setup by (and potentially give ideas of who to reach out to for outreach if you have any)

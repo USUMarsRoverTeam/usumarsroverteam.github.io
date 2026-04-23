@@ -34,11 +34,10 @@ extra_css:
   - stylesheets/extra.css
 
 nav:
-  - Home: index.md
-  - Suggested Capstone Information:
-      - capstone-resources/index.md
-      - Suggested Schedule: capstone-resources/suggested-schedule.md
-      - Future Work: capstone-resources/future-work.md
+  - Home:
+      - index.md
+      - Suggested Schedule: home/suggested-schedule.md
+      - Future Work: home/future-work.md
   - System Overview:
       - sys-overview/index.md
       - Comms and Controls: sys-overview/comms-ctrls.md
@@ -46,7 +45,8 @@ nav:
       - Drive System: sys-overview/drive.md
       - Robotic Arm: sys-overview/arm.md
       - Science Module: sys-overview/sci.md
-      - Autonomous Navigation: sys-overview/autonomous.md
+      - Autonomous Software: sys-overview/autonomous-software.md
+      - Autonomous Hardware: sys-overview/autonomous-hardware.md
       - Drone: sys-overview/drone.md
   - Appendix:
       - appendix/index.md
