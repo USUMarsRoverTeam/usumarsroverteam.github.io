@@ -49,3 +49,16 @@
 .md-content a:hover {
   color: var(--md-primary-fg-color--light) !important;
 }
+
+pre.mermaid {
+  visibility: hidden;
+}
+
+div.mermaid {
+  visibility: visible !important;
+}
+
+.md-button {
+  border: 2px solid var(--md-accent-fg-color) !important;
+  border-radius: 15px !important;
+}

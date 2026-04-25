@@ -53,8 +53,6 @@ nav:
       - Datasheets: appendix/datasheets.md
       - Wiring Diagrams: appendix/wiring-diagrams.md
       - How-Tos: appendix/how-tos.md
-  - Resources:
-      - resources/index.md
 
 markdown_extensions:
   - attr_list
@@ -68,6 +66,14 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - md_in_html
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
 plugins:
   - mkdocs-pdf
+
+extra_javascript:
+  - javascripts/mermaid.mjs
