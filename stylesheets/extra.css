@@ -1,0 +1,64 @@
+/* Light mode */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #0f2439;
+  --md-primary-fg-color--light: #1a3a5c;
+  --md-primary-fg-color--dark: #091729;
+  --md-accent-fg-color: #f58220;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: #ffffff;
+}
+
+[data-md-color-scheme="default"] .md-typeset h1,
+[data-md-color-scheme="default"] .md-typeset h2,
+[data-md-color-scheme="default"] .md-typeset h3,
+[data-md-color-scheme="default"] .md-typeset h4,
+[data-md-color-scheme="default"] .md-typeset h5,
+[data-md-color-scheme="default"] .md-typeset h6 {
+  color: var(--md-default-fg-color);
+}
+
+/* Dark mode */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #0f2439;
+  --md-primary-fg-color--light: #288dc2;
+  --md-primary-fg-color--dark: #091729;
+  --md-accent-fg-color: #f58220;
+  --md-default-bg-color: #0a1a2a;
+  --md-default-fg-color: #ffffff;
+}
+
+[data-md-color-scheme="slate"] .md-nav__title,
+[data-md-color-scheme="slate"] .md-typeset h1,
+[data-md-color-scheme="slate"] .md-typeset h2,
+[data-md-color-scheme="slate"] .md-typeset h3,
+[data-md-color-scheme="slate"] .md-typeset h4,
+[data-md-color-scheme="slate"] .md-typeset h5,
+[data-md-color-scheme="slate"] .md-typeset h6 {
+  color: var(--md-default-fg-color);
+}
+
+[data-md-color-scheme="slate"] .md-nav__link--active {
+  color: #01add8 !important;
+}
+
+.md-content a:link,
+.md-content a:visited {
+  color: var(--md-accent-fg-color) !important;
+}
+
+.md-content a:hover {
+  color: var(--md-primary-fg-color--light) !important;
+}
+
+pre.mermaid {
+  visibility: hidden;
+}
+
+div.mermaid {
+  visibility: visible !important;
+}
+
+.md-button {
+  border: 2px solid var(--md-accent-fg-color) !important;
+  border-radius: 15px !important;
+}
