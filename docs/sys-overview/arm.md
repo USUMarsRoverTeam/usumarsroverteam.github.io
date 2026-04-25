@@ -26,3 +26,4 @@ Switched to a DB25 connector for easy connections, this connects to both the Mae
 - Integration with arm is currently pain. (Really sorry David)
 - Motor box has been replaced multiple times this year, needs analysis.
 - Claw is currently plastic, low grip.
+- Arm Main Gearbox seems to have issues
