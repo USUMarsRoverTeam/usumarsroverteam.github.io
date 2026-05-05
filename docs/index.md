@@ -2,7 +2,6 @@
 title: Home
 icon: material/home
 hide:
-    - navigation
     - toc
 ---
 # Welcome to the USU Mars Rover Team!

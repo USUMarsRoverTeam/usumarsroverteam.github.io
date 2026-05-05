@@ -1,8 +1,6 @@
 ---
 title: Resources
 icon: material/book-open-blank-variant
-hide:
-    - navigation
 ---
 # Learning ROS2
 
